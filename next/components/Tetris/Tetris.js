@@ -5,9 +5,9 @@ import React, { useState, useEffect } from 'react';
 import { StyledTetrisWrapper } from '@/styles/Tetris/Styled_tetris';
 import { StyledTetris } from '@/styles/Tetris/Styled_tetris';
 import { createStage, checkCollision } from './TetrisRule';
-
-import { usePlayer } from '@/hooks/usePlayer';
-import { useStage } from '@/hooks/useStage';
+import usePlayer from '@/hooks/usePlayer';
+import { TETROMINOS } from './tetromino';
+import useStage from '@/hooks/useStage';
 import { useInterval } from '@/hooks/useInterval';
 import { useGameStatus } from '@/hooks/useGameStatus';
 import Swal from 'sweetalert2';
@@ -17,8 +17,12 @@ const Tetris = () => {
   const [dropTime, setDropTime] = useState(null);
   const [gameOver, setGameOver] = useState(false);
   const [player, updatePlayerPos, resetPlayer, playerRotate] = usePlayer();
-  // const [rowCleared] = useStage();
-  const [stage, setStage, rowCleared] = useStage(player);
+  // const [] = usePlayer({
+  //   pos:{x:0, y:0},
+  //   tetromino: TETROMINOS[0].shape,
+  //   collided: false,
+  // });
+  const [stage, setStage, rowCleared] = useStage({player, resetPlayer, gameOver});
   const [score, setScore, rows, setRows, level, setLevel] = useGameStatus(rowCleared);
   const Alert = withReactContent(Swal);
   useEffect(()=>{
@@ -58,9 +62,10 @@ const Tetris = () => {
     }else{
       // 當方塊不能移動且與上方距離小於一時遊戲結束
       if(player.pos.y < 1){
-        console.log("Game Over!!!");
+        // console.log("Game Over!!!");
         setGameOver(true);
         setDropTime(null);
+        return;
       }
       // 方塊抵達底部時按下面方向鍵不再移動
       updatePlayerPos({ x:0, y:0, collided: true });
@@ -131,16 +136,11 @@ const Tetris = () => {
             <StyledTetris>
               <Stage stage={stage}/>
                 <aside>
-                {gameOver? (
-                  <Display gameOver={gameOver} text='Game Over'/>
-                ):(
                   <div>
                     <Display text={`Score: ${score}`}/>
                     <Display text={`Rows: ${rows}`}/>
                     <Display text={`Level: ${level}`}/>
                   </div>
-                )}
-                  
                   <StartBtn callback={startGame}/>
                 </aside>
             </StyledTetris>

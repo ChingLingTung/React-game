@@ -1,9 +1,8 @@
-import { useCallback, useState } from "react";
-
+import React,{ useCallback, useState } from "react";
 import { TETROMINOS, randomTetromino } from "@/components/Tetris/tetromino";
 import { STAGE_WIDTH, checkCollision } from "@/components/Tetris/TetrisRule";
 
-export const usePlayer = () => {
+const usePlayer = () => {
   // 設定遊戲區域初始值沒有方塊
   const [player, setPlayer] = useState({
     pos:{x:0, y:0},
@@ -37,18 +36,19 @@ export const usePlayer = () => {
     setPlayer(clonedPlayer);
   }
   const updatePlayerPos = ({ x, y, collided }) => {
-    setPlayer(prev =>({
+    setPlayer((prev) =>({
       ...prev,
       pos:{ x: (prev.pos.x += x), y: (prev.pos.y += y) },
       collided,
-    }))
+    }));
   }
   const resetPlayer = useCallback(() => {
     setPlayer({
       pos: { x: STAGE_WIDTH / 2 -2, y: 0 },
       tetromino: randomTetromino().shape,
       collided: false,
-    })
+    });
   }, [])
   return [player, updatePlayerPos, resetPlayer, playerRotate];
 };
+export default usePlayer;

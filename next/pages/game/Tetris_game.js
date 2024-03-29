@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { Layout1 } from '@/components/Layout1';
 import Tetris from '@/components/Tetris/Tetris';
 
+
 export default function TetrisGame() {
   
   return (
