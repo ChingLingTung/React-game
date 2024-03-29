@@ -1,0 +1,14 @@
+.display{
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  margin:0 0 10px 0;
+  padding: 10px;
+  border: 4px solid #CA8EFF;
+  min-height: 30px;
+  width: 100%;
+  border-radius: 20px;
+  /* color: ${props =>(props.gameOver? 'red' : '#BE77FF')}; */
+  background-color: #DCB5FF;
+  font-size: 1rem;
+}
