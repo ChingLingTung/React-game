@@ -1,0 +1,29 @@
+.btn{
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  color: #6A6AFF;
+  font-family: "Varela Round", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  background-color: #B9B9FF;
+  text-decoration: none;
+  padding: 10px;
+  border:		#AAAAFF 2px solid;
+  outline: none;
+}
+.btn:hover{
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  color: #6A6AFF;
+  font-family: "Varela Round", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  background-color: 	#CECEFF	;
+  text-decoration: none;
+  padding: 10px;
+  border:		#AAAAFF 2px solid;
+  outline: none;
+}
+

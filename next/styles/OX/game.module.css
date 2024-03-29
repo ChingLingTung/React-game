@@ -1,0 +1,66 @@
+.btn{
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  color: #6A6AFF;
+  font-family: "Varela Round", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  background-color: #B9B9FF;
+  text-decoration: none;
+  padding: 10px;
+  border:		#AAAAFF 2px solid;
+  outline: none;
+}
+.btn:hover{
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  color: #6A6AFF;
+  font-family: "Varela Round", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  background-color: 	#CECEFF	;
+  text-decoration: none;
+  padding: 10px;
+  border:		#AAAAFF 2px solid;
+  outline: none;
+}
+.text{
+  font-size: 20px;
+  font-weight: 300;
+  color: #BE77FF;
+}
+.point{
+  font-size: 24px;
+  font-weight: 600;
+  color: #921AFF;
+}
+.reset{
+  margin: 5px 0px;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: "Varela Round", sans-serif;
+  color: #BE77FF;
+  background-color: #DCB5FF;
+  text-decoration: none;
+  padding: 10px;
+  border:		#BE77FF 2px solid;
+  border-radius: 10px;
+  outline: none;
+}
+.reset:hover{
+  margin: 5px 0px;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: "Varela Round", sans-serif;
+  color: #DCB5FF;
+  background-color: #BE77FF;
+  text-decoration: none;
+  padding: 10px;
+  border:		#BE77FF 2px solid;
+  border-radius: 10px;
+  outline: none;
+}
+
+
