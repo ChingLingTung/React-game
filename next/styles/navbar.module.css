@@ -1,0 +1,24 @@
+.btn_list{
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 50px;
+}
+.navbar_btn {
+  color: #2894FF;
+  font-size: 20px;
+  background-color: #97CBFF;
+  text-decoration: none;
+  padding: 10px;
+  border:	#84C1FF 2px solid;
+  border-radius: 10px;
+}
+.navbar_btn:hover {
+  color: #97CBFF;
+  background-color: #2894FF;
+  text-decoration: none;
+  padding: 10px;
+  border:	#84C1FF 2px solid;
+  border-radius: 10px;
+}

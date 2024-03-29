@@ -1,0 +1,33 @@
+.title {
+  font-weight: 600;
+  font-size: 30px;
+}
+.game_icon{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 0px solid black;
+  border-radius: 20%;
+}
+.game_icon:hover{
+  width: 105px;
+  height: 105px;
+  object-fit: cover;
+  box-shadow: 0px 0px 12px rgba(0,0,0,0.5);
+}
+.game_icon_list{
+  width: 500px;
+  display: flex;
+}
+.OX_game{
+  position: relative;
+}
+.OX_game:hover::before{
+  position: absolute;
+  top: -20px;
+  left: 0px;
+  color: blue;
+  background-color: aliceblue;
+  content: 'OX Game';
+}
+
