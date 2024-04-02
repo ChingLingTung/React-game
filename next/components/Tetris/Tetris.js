@@ -17,6 +17,8 @@ const Tetris = () => {
   const [dropTime, setDropTime] = useState(null);
   const [gameOver, setGameOver] = useState(false);
   const [player, updatePlayerPos, resetPlayer, playerRotate] = usePlayer();
+  const [start, setStart] = useState(false);
+  const [pause, setPause] = useState(false);
   // const [] = usePlayer({
   //   pos:{x:0, y:0},
   //   tetromino: TETROMINOS[0].shape,
@@ -47,6 +49,8 @@ const Tetris = () => {
     setScore(0);
     setRows(0);
     setLevel(0);
+    setStart(true);
+    setPause(false);
   };
   const drop = () => {
     // 當玩家消除十列後增加level
@@ -65,6 +69,7 @@ const Tetris = () => {
         // console.log("Game Over!!!");
         setGameOver(true);
         setDropTime(null);
+        setStart(false);
         return;
       }
       // 方塊抵達底部時按下面方向鍵不再移動
@@ -113,6 +118,7 @@ const Tetris = () => {
                 showCancelButton: true,
               }).then((check) => {
                 if(check.isConfirmed){
+
                   startGame();
                 }else{
                   return;
@@ -123,9 +129,26 @@ const Tetris = () => {
         }
   },[gameOver])
 
+const pauseGame = () => {
+    setPause(true);
+    // console.log(pause, gameOver);
+  }
   useInterval(()=>{
-    drop();
+    if(!pause){
+      drop();
+    }
   }, [dropTime])
+  const continueGame = () => {
+    // 遊戲開始時設定每秒掉落一格
+    setDropTime(1000);
+    // resetPlayer();
+    // setGameOver(false);
+    // setScore(0);
+    // setRows(0);
+    // setLevel(0);
+    setStart(true);
+    setPause(false);
+  };
   return (
           <StyledTetrisWrapper 
             role='button' 
@@ -141,7 +164,7 @@ const Tetris = () => {
                     <Display text={`Rows: ${rows}`}/>
                     <Display text={`Level: ${level}`}/>
                   </div>
-                  <StartBtn callback={startGame}/>
+                  <StartBtn callback={startGame} start={start} pause={pause} pauseGame={pauseGame} continueGame={continueGame}/>
                 </aside>
             </StyledTetris>
             

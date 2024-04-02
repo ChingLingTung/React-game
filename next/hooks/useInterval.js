@@ -8,7 +8,7 @@ export function useInterval(callback, delay){
     savedCallback.current = callback;
   },[callback]);
 
-  // 設定Interval
+  // 設定Interval，tick紀錄最後一次的位置，delay為droptime傳入的下落時間
   useEffect(()=>{
     function tick(){
       savedCallback.current();
