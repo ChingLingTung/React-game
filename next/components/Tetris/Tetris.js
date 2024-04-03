@@ -92,7 +92,8 @@ const Tetris = () => {
     drop();
   };
   const move = ({ keyCode }) => {
-    if(!gameOver){
+    // 遊戲未結束且非暫停時可以透過方向鍵移動
+    if(!gameOver && !pause){
       // 使用者按左邊方向鍵
       if(keyCode === 37){
         movePlayer(-1);
@@ -139,13 +140,8 @@ const pauseGame = () => {
     }
   }, [dropTime])
   const continueGame = () => {
-    // 遊戲開始時設定每秒掉落一格
+    //繼續遊戲回歸設定每秒掉落一格
     setDropTime(1000);
-    // resetPlayer();
-    // setGameOver(false);
-    // setScore(0);
-    // setRows(0);
-    // setLevel(0);
     setStart(true);
     setPause(false);
   };
