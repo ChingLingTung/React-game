@@ -10,6 +10,8 @@
   object-fit: cover;
   border-radius: 10px;
   border: 5px solid #FFD9EC;
+  transition: all ease-in 0.3s;
+  transition-delay: 0.3s;
 }
 .card .front{
   width: 150px;
@@ -18,8 +20,14 @@
   border: 5px solid 		#BEBEBE;
   transform: rotateY(90deg);
   position: absolute;
+  transition: all ease-in 0.3s;
 }
 .flipped .front{
   transform: rotateY(0deg);
+  transition-delay: 0.3s;
+}
+.flipped .back{
+  transform: rotateY(90deg);
+  transition-delay: 0s;
 }
 

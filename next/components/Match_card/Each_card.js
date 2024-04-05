@@ -9,7 +9,7 @@ export default function EachCard({ card, handleChoice, flipped }) {
       <div className={styles.card}>
         <div className={flipped? styles.flipped : ""}>
           <img className={styles.front} src={card.src} alt="card front"/>
-          <img className={styles.back} src="/Card_matching_cover.png" onClick={handleClick} alt="card back"/>
+          <img className={styles.back} src="/card_img/Card_matching_cover.png" onClick={handleClick} alt="card back"/>
         </div>
       </div>
   )
