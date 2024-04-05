@@ -9,9 +9,10 @@ import { useRouter } from "next/router";
 export default function MatchCard() {
   // 卡片圖案庫
   const cardImages = [
-    {"src":"/heart card.png", matched: false },
-    {"src":"/star card.png", matched: false },
-    {"src":"/shining card.png", matched: false },
+    {"src":"/card_img/heart card.png", matched: false },
+    {"src":"/card_img/star card.png", matched: false },
+    {"src":"/card_img/shining card.png", matched: false },
+    {"src":"/card_img/flower card.png", matched: false },
   ];
   const [cards,setCards] = useState([]);
   const [turns,setTurns] = useState(0);
