@@ -15,13 +15,11 @@ export default function Navbar() {
           </Link>
 
 
-          <Link className={styles.navbar_btn} href="/game/OOXX">
-            OOXX
+          <Link className={styles.navbar_btn} href="/game/Match_card">
+            Card Matching
           </Link>
 
-          <Link className={styles.navbar_btn} href="/game/Tetris_game">
-            Tetris
-          </Link>
+          
 
       </nav>
     </>
