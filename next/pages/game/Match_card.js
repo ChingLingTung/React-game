@@ -18,6 +18,7 @@ export default function MatchCard() {
   const [turns,setTurns] = useState(0);
   const [firstOne,setFirstOne] = useState(null);
   const [secondOne,setSecondOne] = useState(null);
+  const [disabled, setDisabled] = useState(false);
   
   const shuffleCards = () => {
     const shuffledCards = [...cardImages, ...cardImages]
@@ -37,12 +38,14 @@ export default function MatchCard() {
     setFirstOne(null);
     setSecondOne(null);
     setTurns(prevTurns => prevTurns + 1);
+    setDisabled(false);
   }
   // console.log(cards, turns);
 
   // 依照配對狀況更新牌的狀態
   useEffect(()=>{
     if(firstOne && secondOne){
+      setDisabled(true);
       if(firstOne.src === secondOne.src){
         // console.log('配對成功');
         setCards((prevCards) =>{
@@ -76,7 +79,9 @@ export default function MatchCard() {
               key = {card.id} 
               card={card} 
               handleChoice={handleChoice} 
-              flipped={card === firstOne || card === secondOne || card.matched}/>
+              flipped={card === firstOne || card === secondOne || card.matched}
+              disabled={disabled}
+              />
             ))}
           </div>
           

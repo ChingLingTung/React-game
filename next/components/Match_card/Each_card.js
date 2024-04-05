@@ -1,9 +1,13 @@
 import React from 'react';
 import styles from '@/styles/Card_matching/each_card.module.css'
 
-export default function EachCard({ card, handleChoice, flipped }) {
+export default function EachCard({ card, handleChoice, flipped, disabled }) {
+  // 多設定一個disabled狀態避免使用者在配對結果出來前快速點擊其他卡片造成錯誤
   const handleClick = () => {
-    handleChoice(card);
+    if(!disabled){
+      handleChoice(card);
+    }
+    
   }
   return (
       <div className={styles.card}>
