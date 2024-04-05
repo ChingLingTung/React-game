@@ -9,11 +9,13 @@
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
+  border: 5px solid #FFD9EC;
 }
 .card .front{
   width: 150px;
   height: 200px;
   border-radius: 10px;
+  border: 5px solid 		#BEBEBE;
   transform: rotateY(90deg);
   position: absolute;
 }

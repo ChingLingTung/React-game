@@ -43,7 +43,7 @@ export default function MatchCard() {
   useEffect(()=>{
     if(firstOne && secondOne){
       if(firstOne.src === secondOne.src){
-        console.log('配對成功');
+        // console.log('配對成功');
         setCards((prevCards) =>{
           return prevCards.map((card) => {
             if(card.src === firstOne.src){
@@ -55,8 +55,10 @@ export default function MatchCard() {
         })
         resetTurn();
       }else{
-        console.log('配對失敗');
-        resetTurn();
+        // console.log('配對失敗');
+        setTimeout(()=>{
+          resetTurn();
+        }, 1000);
       }
     }
   },[firstOne, secondOne])
