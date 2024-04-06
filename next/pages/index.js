@@ -17,7 +17,10 @@ export default function Home() {
             <img className={`${styles.game_icon} ${styles.OX_game}`} src="/OX/OX_icon.png" alt="OX遊戲"/>
             </Link>
             <Link href="/game/Tetris_game">
-              <img className={styles.game_icon} src="/tetris/Tetris_icon.png" alt="OX遊戲"/>
+              <img className={styles.game_icon} src="/tetris/Tetris_icon.png" alt="俄羅斯方塊"/>
+            </Link>
+            <Link href="/game/Match_card">
+              <img className={styles.game_icon} src="/card_img/card matching icon.png" alt="卡片記憶配對"/>
             </Link>
           </div>
         </div>

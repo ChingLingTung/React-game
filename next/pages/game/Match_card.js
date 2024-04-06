@@ -13,6 +13,11 @@ export default function MatchCard() {
     {"src":"/card_img/star card.png", matched: false },
     {"src":"/card_img/shining card.png", matched: false },
     {"src":"/card_img/flower card.png", matched: false },
+    {"src":"/card_img/swirl card.png", matched: false },
+    {"src":"/card_img/snow card.png", matched: false },
+    {"src":"/card_img/moon card.png", matched: false },
+    {"src":"/card_img/music card.png", matched: false },
+    {"src":"/card_img/circles card.png", matched: false },
   ];
   const [cards,setCards] = useState([]);
   const [turns,setTurns] = useState(0);
@@ -23,7 +28,9 @@ export default function MatchCard() {
   const shuffleCards = () => {
     const shuffledCards = [...cardImages, ...cardImages]
       .sort(() => Math.random() - 0.5)
-      .map((card) => ({...card, id: Math.random() }))
+      .map((card) => ({...card, id: Math.random() }));
+    setFirstOne(null);
+    setSecondOne(null);
     setCards(shuffledCards);
     setTurns(0);
   }
@@ -67,6 +74,10 @@ export default function MatchCard() {
     }
   },[firstOne, secondOne])
 
+  // 首次渲染後自動重置遊戲
+  useEffect(()=>{
+    shuffleCards();
+  },[])
   return (
     <>
       <Layout1>
@@ -84,7 +95,7 @@ export default function MatchCard() {
               />
             ))}
           </div>
-          
+          <h3 className={styles.text}>Turns: {turns}</h3>
         </div>
         
         
