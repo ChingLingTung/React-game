@@ -13,6 +13,7 @@
   padding: 10px;
   border:	#AAAAFF 2px solid;
   border-radius: 10px;
+  margin: 10px;
 }
 .newgame_btn:hover {
   color: #B9B9FF;
@@ -32,3 +33,26 @@
 .text{
   padding: 5px;
 }
+.button_list{
+  display: flex;
+}
+.change_mode{
+  color: #6A6AFF;
+  font-size: 20px;
+  background-color: #B9B9FF;
+  text-decoration: none;
+  padding: 10px;
+  border:	#AAAAFF 2px solid;
+  border-radius: 10px;
+  margin: 10px;
+}
+.change_mode:hover{
+  color: #B9B9FF;
+  background-color: #6A6AFF;
+  text-decoration: none;
+  padding: 10px;
+  border:	#AAAAFF 2px solid;
+  border-radius: 10px;
+  cursor: pointer;
+}
+

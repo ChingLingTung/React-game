@@ -20,7 +20,7 @@ export default function Home() {
               <img className={styles.game_icon} src="/tetris/Tetris_icon.png" alt="俄羅斯方塊"/>
             </Link>
             <Link href="/game/Match_card">
-              <img className={styles.game_icon} src="/card_img/card matching icon.png" alt="卡片記憶配對"/>
+              <img className={styles.game_icon} src="/card_img/card_matching_icon.png" alt="卡片記憶配對"/>
             </Link>
           </div>
         </div>
