@@ -5,19 +5,15 @@
 .list{
   padding: 20px;
 }
-.game_img{
-  width: 250px;
-  height: 250px;
+.card_img{
   object-fit: cover;
-  border: 0px solid black;
-  border-radius: 20%;
   margin: 20px;
   object-fit: cover;
 }
-.game_img:hover{
+.card_img:hover{
   object-fit: cover;
   border: 0px solid black;
-  border-radius: 20%;
+
   margin: 20px;
   object-fit: cover;
   cursor: pointer;
@@ -30,7 +26,7 @@
   border-radius: 10px;
   cursor: pointer;
   margin: 20px auto;
-  padding: 5px;
+  padding: 10px;
 }
 .card:hover{
   width: 555px;

@@ -214,8 +214,8 @@ export default function MatchCard() {
               />
             ))}
           </div>
-          {/* <h3 className={styles.text}>Turns: {turns}</h3>
-          <h3 className={styles.text}>困難程度level: {getLevel}</h3>
+          <h3 className={styles.text}>Turns: {turns}</h3>
+          {/* <h3 className={styles.text}>困難程度level: {getLevel}</h3>
           <h3 className={styles.text}>卡片組數mode: {getSelectedMode}</h3> */}
         </div>
         

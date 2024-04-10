@@ -1,9 +1,9 @@
 import { Layout1 } from "@/components/Layout1";
 import Head from "next/head";
-import styles from '@/styles/Home.module.css'
+import styles from '@/styles/List.module.css'
 import Link from "next/link";
 
-export default function Home() {
+export default function List() {
   // 避免使用 window 底下的物件
   // console.log("window.location.href:", window.location.href);
 
