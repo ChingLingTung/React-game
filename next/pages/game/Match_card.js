@@ -180,7 +180,6 @@ export default function MatchCard() {
                 />
               </div>
               :
-              
               <div className={styles.button_list}>
                 <button 
                   className={styles.newgame_btn} 
@@ -214,12 +213,12 @@ export default function MatchCard() {
               />
             ))}
           </div>
-          <h3 className={styles.text}>Turns: {turns}</h3>
-          {/* <h3 className={styles.text}>困難程度level: {getLevel}</h3>
-          <h3 className={styles.text}>卡片組數mode: {getSelectedMode}</h3> */}
+          {getEasy || getNormal || getHard ?
+            (<h3 className={styles.text}>Turns: {turns}</h3>)
+            :
+            ""
+          }
         </div>
-        
-        
       </Layout1>
       <Head>
         <title>卡片配對記憶遊戲</title>
