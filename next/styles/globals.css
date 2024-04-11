@@ -123,5 +123,7 @@ a{
   justify-items: center; 
   align-items: center;
   margin: auto;
-  height: 800px;
+}
+.min_height{
+  min-height: 80vh;
 }

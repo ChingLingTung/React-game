@@ -20,7 +20,10 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@swc/core": "^1.4.13",
     "eslint": "^8",
-    "eslint-config-next": "14.0.4"
+    "eslint-config-next": "14.0.4",
+    "swc-loader": "^0.2.6",
+    "webpack": "^5.91.0"
   }
 }

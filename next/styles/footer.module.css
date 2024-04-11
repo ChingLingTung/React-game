@@ -1,6 +1,23 @@
-.navbar{
-  background-color: #0066CC;
+.footer{
+  background-color: #003D79;
   padding: 20px;
+}
+.text_bar{
+  color: white;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+.text_group{
+  display: flex;
+  justify-content: space-between;
+}
+.text{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 }
 .btn_list{
   width: 600px;
