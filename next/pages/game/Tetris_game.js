@@ -9,7 +9,7 @@ export default function TetrisGame() {
   return (
 
     <div>
-    <Layout1>
+      <Layout1>
         <div className="center">
           <h1>Tetris遊戲</h1>
           <div>

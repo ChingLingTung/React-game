@@ -1,10 +1,10 @@
 .footer{
   background-color: #003D79;
-  padding: 20px;
+  padding: 25px;
 }
 .text_bar{
   color: white;
-  width: 600px;
+  width: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,30 +17,11 @@
 .text{
   display: flex;
   justify-content: center;
-  padding: 10px;
+  color: #fff;
+  margin-top: 5px;
 }
-.btn_list{
-  width: 600px;
+.icon_group{
   display: flex;
-  justify-content: space-around;
-  margin: auto;
-  /* margin-top: 30px; */
-  /* margin-bottom: 30px; */
-}
-.navbar_btn {
-  color: #2894FF;
-  font-size: 20px;
-  background-color: #97CBFF;
-  text-decoration: none;
-  padding: 10px;
-  border:	#84C1FF 2px solid;
-  border-radius: 10px;
-}
-.navbar_btn:hover {
-  color: #97CBFF;
-  background-color: #2894FF;
-  text-decoration: none;
-  padding: 10px;
-  border:	#84C1FF 2px solid;
-  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
 }
