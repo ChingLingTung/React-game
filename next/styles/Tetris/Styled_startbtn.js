@@ -13,7 +13,7 @@ export const StyledStartBTN = styled.button`
   font-family: "Varela Round", sans-serif;
   font-size: 1.2rem;
   outline: none;
-  cursor: pointer;
+
 
   &:hover{
     color: #B9B9FF;
